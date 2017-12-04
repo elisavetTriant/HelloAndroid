@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="udacity_ImageView_margin_small">12dp</dimen>
+    <dimen name="udacity_ImageView_margin_large">18dp</dimen>
+    <dimen name="elements_margin_small">12dp</dimen>
+    <dimen name="elements_margin_large">18dp</dimen>
+    <dimen name="contact_info_elements_padding_small">12dp</dimen>
+    <dimen name="contact_info_elements_padding_large">18dp</dimen>
+    <dimen name="contact_info_elements_font_size_small">12sp</dimen>
+    <dimen name="contact_info_elements_font_size_large">18sp</dimen>
+</resources>

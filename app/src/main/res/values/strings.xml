@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HelloAndroid</string>
+    <string name="address">2465 Latham St\nMountain View, CA 94043</string>
+    <string name="company">Udacity</string>
+    <string name="contact">Contact</string>
+    <string name="phone">650–555–5555</string>
+    <string name="email">scholarships-support@udacity.com</string>
+</resources>

@@ -5,14 +5,13 @@ This is how the App looks like on Android Studio 3:
 
 ![The Project on Android Studio](https://github.com/elisavetTriant/HelloAndroid/blob/master/screenshots/Screenshot_HelloAndroid_AndroidStudio.png "The Project on Android Studio")
 
-And this is what the UI looks like on my device (Lenovo tablet Lollipop API22), portrait and landscape:
+And this is what the UI looks like on my device (Lenovo tablet Lollipop), portrait and landscape:
 
 ![Udacity HelloAndroid App Portrait](https://github.com/elisavetTriant/HelloAndroid/blob/master/screenshots/Screenshot_HelloAndroid_portrait.jpg  "Udacity HelloAndroid App Portrait")
 
 ![Udacity HelloAndroid App Landscape](https://github.com/elisavetTriant/HelloAndroid/blob/master/screenshots/Screenshot_HelloAndroid_landscape.jpg  "Udacity HelloAndroid App Landscape")
 
-And here is what the layout xml code looks like (file app/src/main/res/layout/activity_main.xml, or https://github.com/elisavetTriant/HelloAndroid/blob/master/app/src/main/res/layout/activity_main.xml):
-
+And here is what the layout xml code looks like (file app->src->main->res->layout->activity_main.xml):
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -128,13 +127,13 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
     </LinearLayout>
 </LinearLayout>
 ```
-The design caters for different layout for landscape orientation, file: https://github.com/elisavetTriant/HelloAndroid/blob/master/app/src/main/res/layout-land/activity_main.xml
+The design caters for different layout for landscape orientation (file app->src->main->res->layout-land->activity_main.xml). 
 
-It also caters for larger screen-sizes both portrait and landscape ( files https://github.com/elisavetTriant/HelloAndroid/blob/master/app/src/main/res/layout-large/activity_main.xml and https://github.com/elisavetTriant/HelloAndroid/blob/master/app/src/main/res/layout-large-land/activity_main.xml )
+It also caters for larger screen-sizes both portrait and landscape (files app->src->main->res->layout-large->activity_main.xml and app->src->main->res->layout-large-land->activity_main.xml)
 
-Don't forget to take a look at the resources folder ( /app/res/values ) and take a look at the code there also. 
+Don't forget to take a look at the resources folder (app->res->values) and take a look at the code there also. 
 
-The java code looks like this ( app/src/main/java/co/elisavet/helloandroid )
+The java code looks like this (app->src->main->java->co->elisavet->helloandroid)
 ```java
 package co.elisavet.helloandroid;
 
@@ -171,12 +170,3 @@ public class MainActivity extends AppCompatActivity {
 }
 
 ```
-More resources
-* https://developer.android.com/training/basics/supporting-devices/index.html, (Supporting Different Devices)
-* https://developer.android.com/training/multiscreen/screendensities.html, (Supporting Different Densities)
-* https://developer.android.com/training/multiscreen/screensizes.html, (Supporting Different Screen Sizes)
-* https://developer.android.com/training/basics/supporting-devices/screens.html, (Supporting Different Screens)
-* https://www.android-examples.com/open-website-url-in-androids-web-browser-from-application/, (Open Website Url in Android’s Web browser from application)
-* https://developer.android.com/training/basics/firstapp/starting-activity.html, (Start Another Activity)
-* https://developer.android.com/guide/topics/resources, (App Resources)
-* https://guides.codepath.com/android/Understanding-App-Resources, (Understanding App Resources)

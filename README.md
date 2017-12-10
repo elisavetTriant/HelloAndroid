@@ -3,9 +3,9 @@ This is a small Android App that shows Udacity's contact information. It also ha
 
 This is what the UI looks like on my device (Lenovo tablet Lollipop API22), portrait and landscape:
 
-![Udacity HelloAndroid App Portrait](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_portrait_revised.png  "Udacity HelloAndroid App Portrait")
+![Udacity HelloAndroid App Portrait](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_portrait_revised_links.png  "Udacity HelloAndroid App Portrait")
 
-![Udacity HelloAndroid App Landscape](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_landscape_revised.png  "Udacity HelloAndroid App Landscape")
+![Udacity HelloAndroid App Landscape](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_landscape_revised_links.png  "Udacity HelloAndroid App Landscape")
 
 And here is what the layout xml code looks like (file app/src/main/res/layout/activity_main.xml, or https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/app/src/main/res/layout/activity_main.xml):
 
@@ -98,6 +98,7 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/phone"
+                        android:autoLink="phone"
                         style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
@@ -118,6 +119,7 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/email"
+                        android:autoLink="email"
                         style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 
@@ -252,6 +254,8 @@ More resources
 * https://developer.android.com/training/basics/supporting-devices/screens.html, (Supporting Different Screens)
 * https://www.android-examples.com/open-website-url-in-androids-web-browser-from-application/, (Open Website Url in Android’s Web browser from application)
 * https://developer.android.com/training/basics/firstapp/starting-activity.html, (Start Another Activity)
+* https://stackoverflow.com/questions/37620984/how-to-make-a-android-textview-autolink-its-value-as-a-phone-number (How to make a android textview autolink its value as a phone number)
+* https://stackoverflow.com/questions/10464954/how-to-make-an-email-address-clickable (How to make an email address clickable?)
 * https://developer.android.com/guide/topics/resources, (App Resources)
 * https://guides.codepath.com/android/Understanding-App-Resources, (Understanding App Resources)
 * https://developer.android.com/reference/android/widget/ScrollView.html (ScrollView)

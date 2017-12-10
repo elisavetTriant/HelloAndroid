@@ -1,15 +1,11 @@
 # HelloAndroid
 This is a small Android App that shows Udacity's contact information. It also has a button that opens a spesific url to the devices' default browser. This was made for the  Google Developer Challenge 2017-2018 as an assignment to practice with Layouts, TextViews and ImageViews.
 
-This is how the App looks like on Android Studio 3:
+This is what the UI looks like on my device (Lenovo tablet Lollipop API22), portrait and landscape:
 
-![The Project on Android Studio](https://github.com/elisavetTriant/HelloAndroid/blob/master/screenshots/Screenshot_HelloAndroid_AndroidStudio.png "The Project on Android Studio")
+![Udacity HelloAndroid App Portrait](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_portrait_revised.png  "Udacity HelloAndroid App Portrait")
 
-And this is what the UI looks like on my device (Lenovo tablet Lollipop API22), portrait and landscape:
-
-![Udacity HelloAndroid App Portrait](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_portrait.jpg  "Udacity HelloAndroid App Portrait")
-
-![Udacity HelloAndroid App Landscape](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_landscape.jpg  "Udacity HelloAndroid App Landscape")
+![Udacity HelloAndroid App Landscape](https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/screenshots/Screenshot_HelloAndroid_landscape_revised.png  "Udacity HelloAndroid App Landscape")
 
 And here is what the layout xml code looks like (file app/src/main/res/layout/activity_main.xml, or https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/app/src/main/res/layout/activity_main.xml):
 
@@ -31,19 +27,19 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
             android:layout_weight="1"
             android:scaleType="centerCrop"
             android:src="@drawable/udacity_contact_photo"
-            android:layout_margin="@dimen/udacity_ImageView_margin_small"/>
+            android:layout_margin="@dimen/elements_margin_small"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:fillViewport = "true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/elements_margin_small"
-            android:background="@color/primary_dark"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            style="@style/ContactInfoViewGroupStyleSmall">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -61,10 +57,8 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/company"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -83,10 +77,8 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/address"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -105,10 +97,8 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/phone"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -127,22 +117,17 @@ And here is what the layout xml code looks like (file app/src/main/res/layout/ac
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/email"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/contact_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/elements_margin_small"
-                    android:background="@color/accent"
                     android:text="@string/contact"
-                    android:textAlignment="center"
-                    android:textColor="@color/primary_text"
-                    android:textSize="@dimen/contact_info_elements_font_size_small" />
+                    style="@style/ContactInfoButtonSmall"
+                    />
             </LinearLayout>
     </ScrollView>
 </LinearLayout>
@@ -151,7 +136,77 @@ The design caters for different layout for landscape orientation, file: https://
 
 It also caters for larger screen-sizes both portrait and landscape ( files https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/app/src/main/res/layout-large/activity_main.xml and https://github.com/elisavetTriant/HelloAndroid/blob/Mentor-Suggestions/app/src/main/res/layout-large-land/activity_main.xml )
 
-Don't forget to take a look at the resources folder ( /app/res/values ) and take a look at the code there also. 
+Don't forget to take a look at the resources folder ( /app/res/values ) and take a look at the code there also. For instance the styles.xml code looks like this now: 
+```xml
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme"  parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleSmall">
+        <item name="android:layout_marginLeft">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginRight">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleSmallLandscape">
+        <item name="android:layout_marginRight">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginTop">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleLarge">
+        <item name="android:layout_marginLeft">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginRight">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleLargeLandscape">
+        <item name="android:layout_marginRight">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginTop">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoTextViewsStyleSmall">
+        <item name="android:textColor">@color/icons</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_small</item>
+        <item name="android:padding">@dimen/contact_info_elements_padding_small</item>
+    </style>
+
+    <style name="ContactInfoTextViewsStyleLarge">
+        <item name="android:textColor">@color/icons</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_large</item>
+        <item name="android:padding">@dimen/contact_info_elements_padding_large</item>
+    </style>
+
+    <style name="ContactInfoButtonSmall">
+        <item name="android:layout_margin">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/accent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_small</item>
+    </style>
+
+    <style name="ContactInfoButtonLarge">
+        <item name="android:layout_margin">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/accent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_large</item>
+    </style>
+
+</resources>
+
+```
 
 The java code looks like this ( app/src/main/java/co/elisavet/helloandroid )
 ```java
@@ -200,3 +255,4 @@ More resources
 * https://developer.android.com/guide/topics/resources, (App Resources)
 * https://guides.codepath.com/android/Understanding-App-Resources, (Understanding App Resources)
 * https://developer.android.com/reference/android/widget/ScrollView.html (ScrollView)
+* https://developer.android.com/guide/topics/ui/look-and-feel/themes.html (Styles and Themes)

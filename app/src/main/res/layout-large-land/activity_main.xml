@@ -12,7 +12,7 @@
         android:id="@+id/Udacity_contact_photo_image_view"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:scaleType="centerCrop"
         android:src="@drawable/udacity_contact_photo"
         android:layout_margin="@dimen/elements_margin_large"/>
@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="2"
+        android:layout_weight="5"
         style="@style/ContactInfoViewGroupStyleLargeLandscape">
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/phone"
+                android:autoLink="phone"
                 style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <LinearLayout
@@ -88,6 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/email"
+                android:autoLink="email"
                 style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <Button

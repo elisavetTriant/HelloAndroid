@@ -86,6 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/phone"
+                        android:autoLink="phone"
                         style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
@@ -106,6 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/email"
+                        android:autoLink="email"
                         style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 

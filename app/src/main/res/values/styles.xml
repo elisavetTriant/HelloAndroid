@@ -8,4 +8,60 @@
         <item name="android:colorAccent">@color/accent</item>
     </style>
 
+    <style name="ContactInfoViewGroupStyleSmall">
+        <item name="android:layout_marginLeft">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginRight">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleSmallLandscape">
+        <item name="android:layout_marginRight">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginTop">@dimen/elements_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleLarge">
+        <item name="android:layout_marginLeft">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginRight">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoViewGroupStyleLargeLandscape">
+        <item name="android:layout_marginRight">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginTop">@dimen/elements_margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="ContactInfoTextViewsStyleSmall">
+        <item name="android:textColor">@color/icons</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_small</item>
+        <item name="android:padding">@dimen/contact_info_elements_padding_small</item>
+    </style>
+
+    <style name="ContactInfoTextViewsStyleLarge">
+        <item name="android:textColor">@color/icons</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_large</item>
+        <item name="android:padding">@dimen/contact_info_elements_padding_large</item>
+    </style>
+
+    <style name="ContactInfoButtonSmall">
+        <item name="android:layout_margin">@dimen/elements_margin_small</item>
+        <item name="android:background">@color/accent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_small</item>
+    </style>
+
+    <style name="ContactInfoButtonLarge">
+        <item name="android:layout_margin">@dimen/elements_margin_large</item>
+        <item name="android:background">@color/accent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/contact_info_elements_font_size_large</item>
+    </style>
+
 </resources>

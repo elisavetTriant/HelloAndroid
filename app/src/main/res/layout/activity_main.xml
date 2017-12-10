@@ -15,19 +15,19 @@
             android:layout_weight="1"
             android:scaleType="centerCrop"
             android:src="@drawable/udacity_contact_photo"
-            android:layout_margin="@dimen/udacity_ImageView_margin_small"/>
+            android:layout_margin="@dimen/elements_margin_small"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:fillViewport = "true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/elements_margin_small"
-            android:background="@color/primary_dark"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            style="@style/ContactInfoViewGroupStyleSmall">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -45,10 +45,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/company"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -67,10 +65,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/address"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -89,10 +85,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/phone"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -111,22 +105,17 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/contact_info_elements_padding_small"
                         android:text="@string/email"
-                        android:textColor="@color/icons"
-                        android:textSize="@dimen/contact_info_elements_font_size_small" />
+                        style="@style/ContactInfoTextViewsStyleSmall" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/contact_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/elements_margin_small"
-                    android:background="@color/accent"
                     android:text="@string/contact"
-                    android:textAlignment="center"
-                    android:textColor="@color/primary_text"
-                    android:textSize="@dimen/contact_info_elements_font_size_small" />
+                    style="@style/ContactInfoButtonSmall"
+                    />
             </LinearLayout>
     </ScrollView>
 </LinearLayout>

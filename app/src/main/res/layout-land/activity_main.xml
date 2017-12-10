@@ -9,24 +9,23 @@
     tools:context="co.elisavet.helloandroid.MainActivity">
 
     <ImageView
-        android:id="@+id/Udacity_contact_photo_image_view"
+        android:id="@+id/udacity_contact_photo_image_view"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="4"
+        android:layout_weight="1"
         android:scaleType="centerCrop"
         android:src="@drawable/udacity_contact_photo"
-        android:layout_margin="@dimen/udacity_ImageView_margin_small"/>
+        android:layout_margin="@dimen/elements_margin_small"/>
     <ScrollView
         android:layout_height="match_parent"
         android:layout_width="0dp"
-        android:layout_weight="3"
+        android:layout_weight="1"
         android:fillViewport = "true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/primary_dark"
-            android:layout_margin="@dimen/elements_margin_small">
+            style="@style/ContactInfoViewGroupStyleSmallLandscape">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,9 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/company"
-                    android:padding="@dimen/contact_info_elements_padding_small"
-                    android:textColor="@color/icons"
-                    android:textSize="@dimen/contact_info_elements_font_size_small"/>
+                    style="@style/ContactInfoTextViewsStyleSmall" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -61,9 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/address"
-                android:padding="@dimen/contact_info_elements_padding_small"
-                android:textColor="@color/icons"
-                android:textSize="@dimen/contact_info_elements_font_size_small"/>
+                style="@style/ContactInfoTextViewsStyleSmall" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,9 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/phone"
-                    android:padding="@dimen/contact_info_elements_padding_small"
-                    android:textColor="@color/icons"
-                    android:textSize="@dimen/contact_info_elements_font_size_small"/>
+                    style="@style/ContactInfoTextViewsStyleSmall" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,21 +92,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
-                    android:padding="@dimen/contact_info_elements_padding_small"
-                    android:textColor="@color/icons"
-                    android:textSize="@dimen/contact_info_elements_font_size_small"/>
+                    style="@style/ContactInfoTextViewsStyleSmall" />
             </LinearLayout>
             <Button
                 android:id="@+id/contact_button"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/elements_margin_small"
-                android:background="@color/accent"
-                android:textAlignment="center"
                 android:text="@string/contact"
-                android:textColor="@color/primary_text"
-                android:textSize="@dimen/contact_info_elements_font_size_small"
-                />
+                style="@style/ContactInfoButtonSmall" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

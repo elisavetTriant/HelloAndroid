@@ -12,17 +12,16 @@
         android:id="@+id/Udacity_contact_photo_image_view"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:scaleType="centerCrop"
         android:src="@drawable/udacity_contact_photo"
-        android:layout_margin="@dimen/udacity_ImageView_margin_large"/>
+        android:layout_margin="@dimen/elements_margin_large"/>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/primary_dark"
-        android:layout_weight="3"
-        android:layout_margin="@dimen/elements_margin_large">
+        android:layout_weight="2"
+        style="@style/ContactInfoViewGroupStyleLargeLandscape">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,9 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/company"
-                android:padding="@dimen/contact_info_elements_padding_large"
-                android:textColor="@color/icons"
-                android:textSize="@dimen/contact_info_elements_font_size_large"/>
+                style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,9 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/address"
-                android:padding="@dimen/contact_info_elements_padding_large"
-                android:textColor="@color/icons"
-                android:textSize="@dimen/contact_info_elements_font_size_large"/>
+                style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,9 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/phone"
-                android:padding="@dimen/contact_info_elements_padding_large"
-                android:textColor="@color/icons"
-                android:textSize="@dimen/contact_info_elements_font_size_large"/>
+                style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,22 +88,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/email"
-                android:padding="@dimen/contact_info_elements_padding_large"
-                android:textColor="@color/icons"
-                android:textSize="@dimen/contact_info_elements_font_size_large"/>
+                style="@style/ContactInfoTextViewsStyleLarge"/>
         </LinearLayout>
         <Button
             android:id="@+id/contact_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/elements_margin_large"
-            android:background="@color/accent"
-            android:textAlignment="center"
             android:text="@string/contact"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/contact_info_elements_font_size_small"
-            />
+            style="@style/ContactInfoButtonLarge"/>
     </LinearLayout>
-
-
 </LinearLayout>
